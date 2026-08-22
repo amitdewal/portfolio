@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Amit Dewal | Senior Java Software Engineer</title>
+        <meta name="description" content="Amit Dewal is a Senior Java Software Engineer specializing in Spring Boot, microservices, REST APIs, Kafka, AWS, and reliable backend systems.">
+        <meta name="keywords" content="Amit Dewal, Java Developer, Senior Software Engineer, Spring Boot, Microservices, AWS, Backend Engineer">
+        <meta name="author" content="Amit Dewal">
+        <meta name="robots" content="index, follow">
+        <meta name="theme-color" content="#111111">
+        <link rel="canonical" href="https://amitdewal.github.io/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Amit Dewal | Senior Java Software Engineer">
+        <meta property="og:description" content="Senior Java Software Engineer building scalable backend systems with Spring Boot, microservices, Kafka, and AWS.">
+        <meta property="og:url" content="https://amitdewal.github.io/">
+        <meta property="og:site_name" content="Amit Dewal">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Amit Dewal | Senior Java Software Engineer">
+        <meta name="twitter:description" content="Senior Java Software Engineer building scalable backend systems with Spring Boot, microservices, Kafka, and AWS.">
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Amit Dewal",
+            "jobTitle": "Senior Software Engineer",
+            "url": "https://amitdewal.github.io/",
+            "email": "mailto:amitdewal0303@gmail.com",
+            "sameAs": [
+                "https://github.com/amitdewal",
+                "https://www.linkedin.com/in/adewal/",
+                "https://x.com/amitdwl"
+            ],
+            "knowsAbout": ["Java", "Spring Boot", "Microservices", "Apache Kafka", "AWS", "REST APIs"]
+        }
+        </script>
+    
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <style>
+        /* =========================================
+           1. CSS VARIABLES (THEME CONFIG)
+           ========================================= */
+        :root {
+            /* Light Mode (Default) */
+            --bg-color: #f6f6f3;
+            --text-color: #161616;
+            --text-secondary: #5e5e5a;
+            --primary-color: #111111;
+            --accent-color: #e9e9e4;
+            --card-bg: #ffffff;
+            --card-border: #d9d9d3;
+            --nav-bg: rgba(246, 246, 243, 0.94);
+            --btn-text: #ffffff;
+            --shadow: 0 10px 28px rgba(25, 25, 22, 0.07);
+        }
+
+        [data-theme="dark"] {
+            /* Dark Mode Overrides */
+            --bg-color: #111111;
+            --text-color: #f4f4ef;
+            --text-secondary: #b7b7b0;
+            --primary-color: #f4f4ef;
+            --accent-color: #242421;
+            --card-bg: #1b1b19;
+            --card-border: #3b3b36;
+            --nav-bg: rgba(17, 17, 17, 0.94);
+            --btn-text: #111111;
+            --shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+        }
+
+        /* =========================================
+           2. GLOBAL STYLES
+           ========================================= */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            transition: background-color 0.25s ease, color 0.25s ease;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        ::selection { background: var(--text-color); color: var(--bg-color); }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* =========================================
+           3. NAVIGATION
+           ========================================= */
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--nav-bg);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            border-bottom: 1px solid var(--card-border);
+            padding: 1rem 0;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { font-weight: 800; font-size: 1.35rem; letter-spacing: 0.02em; }
+
+        .nav-links { display: flex; align-items: center; gap: 20px; }
+        .nav-links a { font-weight: 500; font-size: 0.95rem; }
+        .nav-links a:hover { text-decoration: underline; text-underline-offset: 5px; }
+
+        /* Theme Toggle Button */
+        #theme-toggle {
+            background: transparent;
+            border: 1px solid var(--card-border);
+            color: var(--text-color);
+            padding: 6px 12px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        #theme-toggle:hover { background: var(--accent-color); }
+
+        /* =========================================
+           4. SECTIONS & LAYOUT
+           ========================================= */
+        section { padding: 86px 0; border-bottom: 1px solid var(--card-border); }
+        
+        h1 { font-size: clamp(2.5rem, 6vw, 4.8rem); line-height: 1.05; margin-bottom: 1.25rem; font-weight: 800; letter-spacing: -0.04em; }
+        h2 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--text-color); }
+        h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+        p { margin-bottom: 1rem; color: var(--text-secondary); }
+
+        /* Grid Layout for Main Cards */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 18px;
+        }
+
+        /* Cards */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 26px;
+            border-radius: 4px;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover { border-color: var(--text-color); transform: translateY(-3px); }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: var(--btn-text);
+            border-radius: 3px;
+            font-weight: 600;
+            border: 2px solid var(--primary-color);
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .btn-outline { background-color: transparent; color: var(--primary-color); }
+        .btn-outline:hover { background-color: var(--primary-color); color: var(--btn-text); }
+        .social-btn { display: inline-flex; align-items: center; gap: 8px; }
+        .social-icon { font-size: 1.1em; line-height: 1; }
+
+        /* --- SKILL GRID LAYOUT (2 Cols x 3 Rows) --- */
+        .skill-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2 Equal Columns */
+            gap: 10px; /* Space between items */
+            margin-top: auto;
+            padding-top: 15px;
+        }
+
+        .skill-tag {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            padding: 8px 10px;
+            border-radius: 3px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid transparent;
+            width: 100%;
+        }
+        
+        .skill-tag:hover {
+            border-color: var(--text-color);
+            color: var(--text-color);
+        }
+
+        .skill-tag i { font-size: 1.2em; }
+
+        /* Footer */
+        footer { text-align: center; padding: 40px 0; color: var(--text-secondary); font-size: 0.9rem; }
+
+        .eyebrow { color: var(--text-secondary); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 1rem; }
+        .hero-copy { max-width: 720px; text-align: left; }
+        .hero-actions { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px; }
+        .muted { max-width: 800px; }
+        .section-heading { max-width: 680px; }
+        .project-stack { color: var(--text-color); font-size: 0.9rem; margin-top: 10px; }
+        .card-link { color: var(--text-color); font-weight: 700; margin-top: 20px; }
+        .card-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+        .stat { color: var(--text-color); font-size: 3rem; font-weight: 800; margin: 10px 0; }
+        .contact-wrap { max-width: 600px; text-align: left; }
+        .contact-actions { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px; }
+        .education-list { margin-top: 10px; }
+        .education-list li { margin-bottom: 10px; }
+        .education-list span { color: var(--text-secondary); font-size: 0.9rem; }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .card, .btn { transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease; }
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            section { padding: 64px 0; }
+            .nav-links a { display: none; } 
+            .nav-links > a[href="#contact"] { display: inline-flex; }
+                .nav-links > a[href="#contact"] { display: inline-flex; }
+            .nav-links { gap: 10px; }
+            .nav-links #theme-toggle { display: block; }
+            .hero-copy, .contact-wrap { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav aria-label="Primary navigation">
+        <div class="container nav-wrapper">
+            <div class="logo">Amit Dewal</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <button id="theme-toggle" type="button" aria-label="Switch to dark theme">🌙 Dark</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+    <section id="hero">
+        <div class="container hero-copy">
+            <p class="eyebrow">Senior Java Software Engineer · Noida, India</p>
+            <h1>Backend systems built for <span style="color: var(--primary-color);">reliable scale</span></h1>
+            <p class="lead">
+                Building scalable software solutions with a strong engineering foundation.
+                Specializing in Java Backend, System Design, and robust architecture.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn">View My Work</a>
+                <a href="amit_dewal_java_developer_2026.pdf" class="btn btn-outline" download>Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="muted">
+                <p>
+                    I am a Senior Software Engineer based in India with a Bachelor of Engineering from Sant Longowal Institute of Engineering and Technology. I solve complex problems through code and optimize system performance.
+                </p>
+                <p>
+                    I focus on backend development using <strong>Java & Spring Boot</strong>, while maintaining full-stack capabilities. I am currently deep-diving into Data Structures & Algorithms and preparing for the <strong>GATE DA</strong> exam to further specialize in Data Science and AI.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Technical Arsenal</h2>
+            <div class="grid-container">
+                
+                <div class="card">
+                    <h3>Backend Core</h3>
+                    <p style="font-size: 0.9rem;">My primary area of expertise.</p>
+                    <div class="skill-grid">
+                        <div class="skill-tag"><i class="devicon-java-plain colored"></i> Java</div>
+                        <div class="skill-tag"><i class="devicon-spring-original colored"></i> Spring Boot</div>
+                        <div class="skill-tag"><i class="devicon-hibernate-plain colored"></i> Hibernate</div>
+                        <div class="skill-tag"><i class="devicon-apachekafka-original colored"></i> Kafka</div>
+                        <div class="skill-tag">🌐 REST API</div>
+                        <div class="skill-tag">🧩 Microservices</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Frontend & Web</h3>
+                    <p style="font-size: 0.9rem;">Building responsive interfaces.</p>
+                    <div class="skill-grid">
+                        <div class="skill-tag"><i class="devicon-html5-plain colored"></i> HTML5</div>
+                        <div class="skill-tag"><i class="devicon-css3-plain colored"></i> CSS3</div>
+                        <div class="skill-tag"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
+                        <div class="skill-tag"><i class="devicon-react-original colored"></i> React.js</div>
+                        <div class="skill-tag"><i class="devicon-angularjs-plain colored"></i> Angular</div>
+                        <div class="skill-tag"><i class="devicon-tailwindcss-original colored"></i> Tailwind</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Database & Tools</h3>
+                    <p style="font-size: 0.9rem;">Data management & collaboration.</p>
+                    <div class="skill-grid">
+                        <div class="skill-tag"><i class="devicon-mysql-original colored"></i> MySQL</div>
+                        <div class="skill-tag"><i class="devicon-postgresql-plain colored"></i> Postgres</div>
+                        <div class="skill-tag"><i class="devicon-mongodb-plain colored"></i> MongoDB</div>
+                        <div class="skill-tag"><i class="devicon-git-plain colored"></i> Git</div>
+                        <div class="skill-tag"><i class="devicon-github-original"></i> GitHub</div>
+                        <div class="skill-tag"><i class="devicon-postman-plain colored"></i> Postman</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>DevOps & Cloud</h3>
+                    <p style="font-size: 0.9rem;">Deployment & Infrastructure.</p>
+                    <div class="skill-grid">
+                        <div class="skill-tag"><i class="devicon-docker-plain colored"></i> Docker</div>
+                        <div class="skill-tag"><i class="devicon-jenkins-plain colored"></i> Jenkins</div>
+                        <div class="skill-tag"><i class="devicon-linux-plain"></i> Linux</div>
+                        <div class="skill-tag"><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS</div>
+                        <div class="skill-tag">🔄 CI/CD</div>
+                        <div class="skill-tag"><i class="devicon-nginx-original colored"></i> Nginx</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="grid-container">
+                
+                <div class="card">
+                    <h3>Expense Tracker Application</h3>
+                    <p><strong>Built:</strong> A Spring Boot expense tracker with JWT authentication, refresh tokens, Spring Security configuration, and rate limiting.</p>
+                    <p><strong>Features:</strong> CSV export, environment-specific Spring Profiles, and unit tests with JUnit 5 and Mockito.</p>
+                    <p class="project-stack"><strong>Tech Stack:</strong> Java, Spring Boot, Spring Security, MySQL</p>
+                    <div style="margin-top: 20px;">
+                        <a href="https://github.com/amitdewal" class="card-link" rel="noopener" target="_blank">View Code &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Spring Security Authentication System</h3>
+                    <p><strong>Built:</strong> A secure login system with user registration and an authentication mechanism designed around Spring Security.</p>
+                    <p class="project-stack"><strong>Tech Stack:</strong> Java, Spring Boot, Spring Security</p>
+                    <div style="margin-top: 20px;">
+                        <a href="https://github.com/amitdewal" class="card-link" rel="noopener" target="_blank">View Code &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <div class="container">
+            <h2>Problem Solving & Education</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>DSA & Competitive Coding</h3>
+                    <p class="stat">300+</p>
+                    <p>Problems Solved across LeetCode & HackerRank</p>
+                </div>
+                <div class="card">
+                    <h3>Education</h3>
+                    <ul class="education-list">
+                        <li>
+                            <strong>B.Tech (Bachelor of Technology)</strong><br>
+                            <span>Sant Longowal Institute of Engineering and Technology (SLIET), CGPA 7.26</span>
+                        </li>
+                        <li>
+                            <strong>GATE DA Aspirant</strong><br>
+                            <span>Specializing in Data Science & Artificial Intelligence</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="border-bottom: none;">
+        <div class="container contact-wrap">
+            <h2>Let's Connect</h2>
+            <p>I am currently open to opportunities in Backend and Full-Stack Engineering. Feel free to reach out via email or LinkedIn.</p>
+            <div class="contact-actions">
+                <a href="mailto:amitdewal0303@gmail.com" class="btn">Email Me</a>
+                <a href="https://www.linkedin.com/in/adewal/" class="btn btn-outline social-btn" rel="noopener" target="_blank"><i class="devicon-linkedin-plain social-icon" aria-hidden="true"></i>LinkedIn</a>
+                <a href="https://github.com/amitdewal" class="btn btn-outline social-btn" rel="noopener" target="_blank"><i class="devicon-github-original social-icon" aria-hidden="true"></i>GitHub</a>
+                <a href="https://x.com/amitdwl" class="btn btn-outline social-btn" rel="noopener" target="_blank">X</a>
+                <a href="https://wa.me/917683051703" class="btn btn-outline social-btn" rel="noopener" target="_blank"><i class="devicon-whatsapp-plain social-icon" aria-hidden="true"></i>WhatsApp</a>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            &copy; 2025 Amit Dewal. Built with precision.
+        </div>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+        
+        // 1. Check local storage for saved theme on load
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme) {
+            htmlElement.setAttribute('data-theme', currentTheme);
+            updateButtonText(currentTheme);
+        }
+
+        // 2. Function to update button text
+        function updateButtonText(theme) {
+            if (theme === 'dark') {
+                toggleButton.textContent = '☀️ Light';
+            } else {
+                toggleButton.textContent = '🌙 Dark';
+            }
+        }
+
+        // 3. Event Listener for Toggle
+        toggleButton.addEventListener('click', () => {
+            let theme = htmlElement.getAttribute('data-theme');
+            
+            if (theme === 'dark') {
+                htmlElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                updateButtonText('light');
+            } else {
+                htmlElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                updateButtonText('dark');
+            }
+        });
+    </script>
+</body>
+</html>
