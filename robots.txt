@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /index._old.html
 
 Sitemap: https://amitdewal.com/sitemap.xml
